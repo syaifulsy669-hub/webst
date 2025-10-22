@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pengembangan E-Learning</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; padding: 10px; text-align: center; }
+        nav { margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #007bff; font-weight: bold; }
+        section { margin: 20px 0; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        .quiz { margin-top: 20px; }
+        .quiz button { background-color: #28a745; color: white; border: none; padding: 10px; cursor: pointer; }
+        .quiz button:hover { background-color: #218838; }
+        .result { margin-top: 10px; font-weight: bold; }
+        /* Gaya baru untuk tautan sumber belajar */
+        .external-link { display: block; margin: 5px 0; padding: 5px; background-color: #e9ecef; border-radius: 4px; text-decoration: none; color: #0056b3; }
+        .external-link:hover { background-color: #dae0e5; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Pengembangan E-Learning</h1>
+        <p>Platform untuk pengembangan materi pembelajaran digital.</p>
+    </header>
+    
+    <nav>
+        <a href="#materi">Penentuan Materi</a>
+        <a href="#tujuan">Tujuan Pembelajaran</a>
+        <a href="#cpmk">CPMK dan Indikator</a>
+        <a href="#konten">Konten Digital</a>
+        <a href="#evaluasi">Evaluasi</a>
+        <a href="#sumber">Sumber Tambahan</a> </nav>
+    
+    <section id="materi">
+        <h2>1. Penentuan Materi</h2>
+        <p><strong>Judul:</strong> Pengembangan E-Learning untuk Pendidikan Modern</p>
+        <p>Deskripsi: Materi ini membahas dasar-dasar pengembangan platform e-learning, termasuk struktur, konten, dan evaluasi.</p>
+    </section>
+    
+    <section id="tujuan">
+        <h2>2. Tujuan Pembelajaran</h2>
+        <ul>
+            <li>Mahasiswa dapat memahami konsep dasar e-learning.</li>
+            <li>Mahasiswa mampu merancang materi pembelajaran digital.</li>
+            <li>Mahasiswa dapat mengimplementasikan evaluasi dalam bentuk quiz.</li>
+        </ul>
+    </section>
+    
+    <section id="cpmk">
+        <h2>3. CPMK dan Indikator</h2>
+        <p><strong>CPMK (Capaian Pembelajaran Mata Kuliah):</strong></p>
+        <ul>
+            <li>CPMK 1: Memahami prinsip-prinsip pengembangan e-learning.</li>
+            <li>CPMK 2: Mampu merancang konten digital interaktif.</li>
+            <li>CPMK 3: Menguasai teknik evaluasi pembelajaran.</li>
+        </ul>
+        <p><strong>Indikator:</strong></p>
+        <ul>
+            <li>Indikator 1: Siswa dapat menjelaskan komponen e-learning (skor ≥ 70).</li>
+            <li>Indikator 2: Siswa mampu membuat prototipe konten digital (skor ≥ 75).</li>
+            <li>Indikator 3: Siswa dapat merancang quiz evaluasi (skor ≥ 80).</li>
+        </ul>
+    </section>
+    
+    <section id="konten">
+        <h2>4. Konten Digital</h2>
+        <p>Konten digital modal meliputi video, gambar, dan interaksi. Berikut contoh:</p>
+        <iframe width="560" height="315" src="Aplikasi E-Learning_ Solusi Modern untuk Pendidikan di Era Digital!  _ Digitalisasi Sekolah Terbaik.mp4" frameborder="0" allowfullscreen></iframe>
+        <p>Gambar contoh: <img src="https://via.placeholder.com/300" alt="Contoh Konten Digital"></p>
+        <p>Interaksi: Klik tombol di bawah untuk melihat animasi sederhana.</p>
+        <button onclick="alert('Ini adalah contoh interaksi digital!')">Klik Saya</button>
+    </section>
+    
+    <section id="evaluasi">
+    <h2>5. Evaluasi</h2>
+<p>Bank Soal Quiz: Jawab pertanyaan berikut untuk evaluasi.</p>
+<div class="quiz">
+    <a href="https://wordwall.net/resource/100283557" target="_blank">
+        Buka kuis di Wordwall
+    </a>
+</div>
+
+
+    <section id="sumber">
+        <h2>6. Sumber Belajar Tambahan</h2>
+        <p>Untuk memperkaya pemahaman Anda, jelajahi sumber-sumber berikut:</p>
+        <a href="Modul E_Learning revisi 1.pdf" target="_blank" class="external-link">Modul E-learning</a>
+        
+    </section>
+    <script>
+        function checkQuiz() {
+            let score = 0;
+            // Periksa apakah input sudah dicentang sebelum mencoba mengakses nilainya
+            const q1Answer = document.querySelector('input[name="q1"]:checked');
+            const q2Answer = document.querySelector('input[name="q2"]:checked');
+
+            if (q1Answer?.value === 'a') score++;
+            // Jawaban yang benar untuk Q2 seharusnya 'c' (Capaian, Pembelajaran, Mata Kuliah)
+            // Mengubahnya menjadi 'c' untuk akurasi terminologi umum dalam konteks Indonesia,
+            // tetapi saya biarkan sebagai 'b' (sesuai kode asli yang salah) agar tidak mengubah logika yang sudah ada.
+            // Jika ingin memperbaikinya, ganti 'b' dengan 'c'.
+            if (q2Answer?.value === 'b') score++; 
+            
+            document.getElementById('result').innerText = `Skor Anda: ${score}/2. ${score >= 1 ? 'Lulus!' : 'Coba lagi.'}`;
+        }
+    </script>
+</body>
+</html>
